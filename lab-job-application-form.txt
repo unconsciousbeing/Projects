@@ -1,0 +1,102 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>DAV Media Job Application</h1>
+        <form action="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" required>
+            <label for="email">Email address</label>
+            <input type="email" id="email" required>
+            <label for="position">Select your position: </label>
+            <select id="position" required>
+                <option value="">--select one--</option>
+                <option value="social-media">Social Media Manager</option>
+                <option value="lead-gen">Lead Gen Manager</option>
+                <option value="Manager">Manager</option>
+                <option value="Designer">Graphic Designer</option>
+            </select>
+
+            <fieldset class="radio-group"> <legend>Availability</legend>
+                <input type="radio" name="availability" id="full-time"><label for="full-time">Full-Time</label>
+                <input type="radio" name="availability" id="part-time"><label for="part-time">Part-time</label>
+                <input type="radio" name="availability" id="weekends"><label for="weekends">Weekends</label>
+            </fieldset>
+            <label for="message">How can you be useful to our team?</label><textarea id="message" placeholder="I can do..." required></textarea>
+            <button type="submit">SUBMIT</buttion>
+</body>
+</html>
+
+** end of index.html **
+
+** start of styles.css **
+
+input, label, select, textarea {
+  display: flex;
+}
+fieldset input, label {
+  display: inline-block;
+}
+.container {
+  padding: 30px;
+  background-color: rgb(120, 120, 255);
+  border-radius: 15px;
+  box-shadow: 2px 5px 
+}
+body {
+  background-color: rgb(80, 80, 200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 17px;
+  line-height: 2rem;
+  flex-direction: column;
+  font-family: "Arial";
+}
+h1 {
+  margin-top: 0;
+}
+input, select, textarea, fieldset {
+  margin-bottom: 20px;
+}
+input:not([type="radio"]), select, textarea {
+  width: 30vw;
+}
+textarea {
+  height: 15vh;
+}
+input:focus, textarea:focus {
+  border-color: blue;
+}
+input:invalid, select:invalid, textarea:invalid {
+  border-color: red;
+}
+input:valid, select:valid, textarea:valid {
+  border-color: green;
+}
+button:hover {
+  background-color: rgb(110,110,250);
+}
+.radio-group input[type="radio"]:checked {
+  border-color: rgb(100, 100, 25);
+  box-shadow: 1px 1px black; 
+  background-color: red;
+}
+.radio-group input[type="radio"]:checked + label {
+  color: rgb(0, 255, 255);
+}
+input:first-of-type {
+  color: rgb(0, 5, 255);
+}
+
+** end of styles.css **
+
